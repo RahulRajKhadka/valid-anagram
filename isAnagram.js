@@ -1,22 +1,19 @@
-function isAnagram(s,t) {
-    if(s.length!==t.length)return false;
+function isAnagram(s, t) {
+  if (s.length !== t.length) return false;
 
-    const count ={}
+  const count = {};
 
-    for( const char of s){
+  for (const char of s) {
+    count[char] = (count[char] || 0) + 1;
+  }
 
-        count[char]=(count[char]|| 0) +1;
-    }
+  for (const char of t) {
+    if (count[char] === undefined || count[char] === 0) return false;
+    count[char]--;
+  }
 
-    for (const char of t){
-
-        if(!count[char]) return false;
-        count[char]--;
-    }
-
-    return true;
-    
+  return true;
 }
 
-console.log(isAnagram("listen","silent"));
-console.log(isAnagram("rat","car"));
+console.log(isAnagram("listen", "silent")); 
+console.log(isAnagram("rat", "car"));       
