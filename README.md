@@ -1,10 +1,10 @@
-#valid Anagaram 
+#valid Anagrams
 
 ## Problem 
 Determine if two strings are anagarms of each other.
-A anagaram is a word or pharse formed by rearranging the letter of a different word or pharse , using all orginal letter exactly onece.
+A anagrams is a word or pharse formed by rearranging the letter of a different word or pharse , using all orginal letter exactly onece.
 
-##Examples 
+## Examples 
 Input: "listen", "silent" →  Output: true
 Input: "rat", "car" →  Output: false
 
@@ -47,5 +47,6 @@ Overall, we go through each character in the strings once, so the total time com
 We use an object to store the frequency of each character in the first string.
 In the worst case, all characters are different, so the object stores n entries.
 Therefore, the space complexity is O(n).
+
 O(1) if only lowercase English letters are used (at most 26 characters).
 
